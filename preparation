@@ -1,2 +1,14 @@
 EXAMPLE OF REPLACE FUNCTION
 df_clean = df.replace([np.inf, -np.inf], np.nan)
+
+EXAMPLE OF DROPNA FUNCTION
+df_clean = df_clean.dropna(subset = ['rougher.output.recovery', 'rougher.calculation.recovery'], axis=0)
+
+EXAMPLE OF DROP FUNCTION
+df_difference = df.drop(columns = df_test.columns,  axis=1)
+
+EXAMPLE OF ISNA
+df.isna().sum()
+
+EXAMPLE OF FILLNA
+df.fillna(df.median(), inplace=True)
