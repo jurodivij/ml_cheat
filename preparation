@@ -1,0 +1,2 @@
+EXAMPLE OF REPLACE FUNCTION
+df_clean = df.replace([np.inf, -np.inf], np.nan)
