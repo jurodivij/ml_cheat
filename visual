@@ -1,0 +1,13 @@
+Seaborn histogram with multiple arrays on the same axis
+
+plt.rcParams["figure.figsize"] = [15.00, 7.50]
+x = df['final.output.concentrate_au']
+y = df['final.output.concentrate_ag']
+z = df['final.output.concentrate_pb']
+fig, ax = plt.subplots()
+for a, b, c in zip([x, y, z], ['au', 'ag', 'pb'], ['red', 'green', 'blue']):
+    sns.histplot(a, bins=50, ax=ax, kde=False, label=b, color=c)
+ax.set_xlim([0, 55])
+ax.set_title('Распределение для металлов после второго этапа очистки')
+ax.legend()
+plt.show()
