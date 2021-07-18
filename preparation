@@ -12,3 +12,6 @@ df.isna().sum()
 
 EXAMPLE OF FILLNA
 df.fillna(df.median(), inplace=True)
+
+WORKING WITH STRINGS (take the first 4 chars from the lines)
+df['puchok'] = df['block_name'].str.slice(stop=4)
